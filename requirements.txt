@@ -1,0 +1,5 @@
+yfinance
+matplotlib
+plotly
+openai
+python-dotenv
