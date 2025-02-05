@@ -110,7 +110,7 @@ def wick_analysis(ticker, start_date, end_date):
     chart_data = data[['Open', 'High', 'Low', 'Close', 'Volume']]
     plt.figure(figsize=(10, 6))
     try:
-        mpf.plot(
+        mpl.plot(
             chart_data,
             type="candle",
             title=f"{ticker} Candlestick Chart ({start_date} to {end_date})",
