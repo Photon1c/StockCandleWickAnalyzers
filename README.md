@@ -2,7 +2,7 @@
 
 This is a minimal script to create stock price candle screenshots to 1)load them to imagekit.io and 2)analyze the images using LLM vision models, in this instance OpenAI GPT-4o.
 
-Check back later for the working script as this project is still in the debugging phase!
+Check back later for the working scripts as this project is still in the debugging phase!
 
 Currently in the task pipeline:  
 
