@@ -1,4 +1,4 @@
-# Candle Wick Analyzer
+# Stock Candle Wick Analyzer
 
 This is a minimal script to create stock price candle screenshots to 1)load them to imagekit.io and 2)analyze the images using LLM vision models, in this instance OpenAI GPT-4o.
 
