@@ -1,4 +1,5 @@
 # Analyze uploaded stock candle-wick chart
+# No image analysis, only text response-based
 import yfinance as yf
 import pandas as pd
 import plotly.graph_objects as go
