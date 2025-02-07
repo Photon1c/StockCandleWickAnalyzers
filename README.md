@@ -3,7 +3,7 @@
 This is a collection of minimal scripts that perform the following intended steps:
 
 1)Create a stock candle chart of a defined stock.  
-2)Upload these charts to imagekit.io.  
+2)Upload this chart to imagekit.io.  
 3)Using LLM vision models, analyze the uploaded images-- this repository uses OpenAI's GPT-4o.  
 
 The fatman script uses LLM chat completion, while the imagekit test is running into write permission issues that will be updated as time permits.  
