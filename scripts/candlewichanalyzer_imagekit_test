@@ -17,9 +17,9 @@ client = OpenAI()
 
 # Initialize ImageKit client
 imagekit = ImageKit(
-    private_key='private_3FclAA4gpsUG9dcupyPb1d3uGq8=',
-    public_key='public_2VlnpuIZh/Z54GUWpFiAVsNrxxQ=',
-    url_endpoint='https://ik.imagekit.io/fwe3vbq1p'
+    private_key='your_imagekit_private_key',
+    public_key='your_imagekit_public_key',
+    url_endpoint='https://ik.imagekit.io/{your_imagekit_endpoint}'
 )
 
 def plot_candlestick_chart(ticker, data):
