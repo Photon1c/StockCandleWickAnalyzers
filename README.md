@@ -1,4 +1,4 @@
-# Stock Candle Wick Analyzer
+# Stock Candle Wick Analyzers
 
 This is a collection of minimal scripts which aim to create stock price candle screenshots that 1)are uploaded to imagekit.io and 2)analyzes the images using LLM vision models, in this instance OpenAI's GPT-4o. the fatman script uses LLM chat completion, while the imagekit test is running into write permission issues that will be updated as time permits.
 
