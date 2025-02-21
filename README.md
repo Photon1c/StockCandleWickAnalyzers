@@ -12,7 +12,9 @@ This repository is a collection of minimal scripts that perform the following in
 2)Upload this chart to imagekit.io.  
 3)Using LLM vision models, analyze the uploaded images-- this repository uses OpenAI's GPT-4o.  
 
-The fatman script uses LLM chat completion, while the imagekit test is running into write permission issues that will be updated as time permits.  
+The fatman script uses LLM chat completion, while the imagekit test is running into write permission issues that will be updated as time permits.
+>NOTE
+>As of 2.21 this issue has been resolved, but the imagekit test script will still be archived for further studying.
 
 Check back later for optimized scripts, since this project is still in the debugging phase :construction: :building_construction: :construction_worker:   
 
