@@ -22,8 +22,9 @@ Currently in the task pipeline:
 
 - [x] Successfully upload image to imagekit.io and analyze with LLM. ✔️
 - [x] Generate sample output text files. ✔️
-- [ ] Integrate image analysis with streamlined list iterator and report builder. ⏳
-- [ ] Create scheduler and email agent to further automate reports. ⏳  
+- [ ] Integrate image analysis with streamlined list iterator and report builder. 🗞️📰⏳
+- [ ] Create scheduler and email agent to further automate reports. 🕐⏳
+- [ ] Create persistent monitor listener script to test commentary agent. 👂⌛
 
 > [!NOTE]
 > The results obtained from these scripts are not financial advice.  
