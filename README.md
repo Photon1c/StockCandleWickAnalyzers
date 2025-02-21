@@ -1,6 +1,12 @@
 # Stock Candle Wick Analyzers
 
-This is a collection of minimal scripts that perform the following intended steps:
+# Update 2.20.25 - Imagekit Vision Report Generator Ready 👓💹🎊
+
+The [Imagekit Vision Analysis](scripts/imagekit-vision-analysis-hourglass-version.ipynb) script is now available.
+
+# Wick Machine Vision Analysis 🚧 - Check back for new scripts!
+
+This Repository is a collection of minimal scripts that perform the following intended steps:
 
 1)Create a stock candle chart of a defined stock.  
 2)Upload this chart to imagekit.io.  
@@ -12,7 +18,7 @@ Check back later for optimized scripts, since this project is still in the debug
 
 Currently in the task pipeline:  
 
-- Successfully upload image to imagekit.io and analyze with LLM. :white_check_mark:
-- Generate sample output text files. :construction: :building_construction:
+- Successfully upload image to imagekit.io and analyze with LLM. ✔️
+- Generate sample output text files. ✔️
 
 ![Cover Image](coverimage.png)
