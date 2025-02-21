@@ -13,7 +13,7 @@ from PIL import Image
 load_dotenv()
 
 client = OpenAI()
-screenshot_dir = r"F:\StillWater\Apps\Pecuniary\smartinvestor\tools\FalconEye\screenshots"
+screenshot_dir = r"X:\screenshots"
 os.makedirs(screenshot_dir, exist_ok=True)
 
 # ImageKit Credentials
