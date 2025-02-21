@@ -18,8 +18,12 @@ Check back later for optimized scripts, since this project is still in the debug
 
 Currently in the task pipeline:  
 
-- Successfully upload image to imagekit.io and analyze with LLM. ✔️
-- Generate sample output text files. ✔️
+- [x] Successfully upload image to imagekit.io and analyze with LLM. ✔️
+- [x] Generate sample output text files. ✔️
+- [ ] Integrate image analysis with streamlined list iterator and report builder. ⏳
+
+> [!NOTE]
+> The results obtained from these scripts are not financial advice.   
 
 ![Flow Diagram](media/aistockvision.png)
 ![Cover Image](media/coverimage.png)
