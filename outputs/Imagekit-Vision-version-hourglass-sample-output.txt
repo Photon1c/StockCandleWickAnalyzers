@@ -51,5 +51,6 @@ short-term traders and potentially signal caution for more risk-averse investors
 the uptrend towards previous highs.\n\n2. **Bearish Scenario:**\n   - Failure to hold the support could lead to a continuation of 
 the downward correction, with potential further declines.\n\n3. **Volume Considerations:**\n   - The high volume associated 
 with recent moves suggests strong investor interest. It will be critical to monitor volume for confirmation of any trend continuation or 
-reversal.\n\n4. **Key Levels:**\n   - Resistance is likely around the recent high near $125–$130, while support near $100 will be crucial to watch.\n\nMonitoring upcoming earnings reports or news that could impact market sentiment is important for additional insights into possible  
-future price actions.'
+reversal.\n\n4. **Key Levels:**\n   - Resistance is likely around the recent high near $125–$130, while support near $100 will be crucial 
+to watch.\n\nMonitoring upcoming earnings reports or news that could impact market sentiment is important for additional insights
+into possible future price actions.'
