@@ -2,7 +2,7 @@
 
 # Update 2.20.25 - Imagekit Vision Report Generator Ready 👓💹🎊
 
-The [Imagekit Vision Analysis](scripts/Imagekit-Vision-Analysis-version-hourglass.py) script is now available.
+The [Imagekit Vision Analysis](scripts/Imagekit-Vision-Analysis-version-hourglass.py) script is now available. Here is some sample [output.](outputs/Imagekit-Vision-version-hourglass-sample-output.txt)
 
 # Wick Machine Vision Analysis 🚧 - Check back for new scripts!
 
