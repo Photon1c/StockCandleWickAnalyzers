@@ -6,7 +6,7 @@ The [Imagekit Vision Analysis](scripts/Imagekit-Vision-Analysis-version-hourglas
 
 # Wick Machine Vision Analysis 🚧 - Check back for new scripts!
 
-This Repository is a collection of minimal scripts that perform the following intended steps:
+This repository is a collection of minimal scripts that perform the following intended steps:
 
 1)Create a stock candle chart of a defined stock.  
 2)Upload this chart to imagekit.io.  
