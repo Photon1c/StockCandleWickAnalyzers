@@ -23,7 +23,12 @@ Currently in the task pipeline:
 - [ ] Integrate image analysis with streamlined list iterator and report builder. ⏳
 
 > [!NOTE]
-> The results obtained from these scripts are not financial advice.   
+> The results obtained from these scripts are not financial advice.  
+
+| Requirements  | Purpose |
+| ------------- | ------------- |
+| OpenAI API Key  | Processing the image query  |
+| Imagekit.io API Key  | Storing the image for retrieval  |  
 
 ![Flow Diagram](media/aistockvision.png)
 ![Cover Image](media/coverimage.png)
