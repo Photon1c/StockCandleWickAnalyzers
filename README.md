@@ -21,4 +21,6 @@ Currently in the task pipeline:
 - Successfully upload image to imagekit.io and analyze with LLM. ✔️
 - Generate sample output text files. ✔️
 
-![Cover Image](media/aistockvision.png)
+![Flow Diagram](media/aistockvision.png)
+![Cover Image](media/coverimage.png)
+
