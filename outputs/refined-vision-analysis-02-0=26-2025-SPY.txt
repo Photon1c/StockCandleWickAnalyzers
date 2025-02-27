@@ -1,0 +1,95 @@
+#latest vision analysis report generator=== Capturing TradingView Chart ===
+Initializing WebDriver...
+Opening TradingView URL: https://www.tradingview.com/chart/?symbol=SPY
+Taking screenshot...
+Converting screenshot to a valid PNG format...
+Chart successfully saved: \screenshots\SPY_chart.png
+
+Uploading image to ImageKit...
+Uploading \screenshots\SPY_chart.png to ImageKit...
+Upload response: {'fileId': '[redacted]', 'name': 'SPY_chart.png', 'size': 82140, 'versionInfo': {'id': '[redacted]', 'name': 'Version 1'}, 'filePath': '/SPY_chart.png', 'url': '[redacted]', 'fileType': 'image', 'height': 824, 'width': 1295, 'thumbnailUrl': '[redacted]', 'AITags': None}
+Image uploaded successfully: https://ik.imagekit.io/fwe3vbq1p/SPY_chart_2y0B4nPMT.png
+
+Running AI analysis on the uploaded chart...
+Deleted local image: F:\StillWater\Apps\Pecuniary\smartinvestor\tools\FalconEye\screenshots\SPY_chart.png
+
+=== AI-Generated TradingView Chart Analysis ===
+
+Here's a table report analyzing the stock chart:
+
+| **Aspect**          | **Analysis**                                                                                      |
+|---------------------|---------------------------------------------------------------------------------------------------|
+| **Directional Momentum** | The recent candlesticks indicate downward pressure following a peak, suggesting bearish sentiment.   |
+| **Trends**          | The overall trend shows a recent reversal from an uptrend to a downtrend, marked by lower highs and lows. |
+| **Volatility**      | Increased size in recent candlesticks and volume spikes suggest heightened volatility.            |
+| **Support & Resistance** | Potential resistance near recent high around 612 and support around the current price of 594.            |
+| **Volume**          | Current volume at 43.29M, slightly below the 30-day average (44.66M), indicates moderate activity.   |
+| **Perceived Sentiment** | Neutral to Bearish. Short-term bearish due to recent declines, while neutral in the broader context. |
+
+### Insights
+
+- **Price Action**: The recent drop suggests potential continuation of the downtrend unless a reversal pattern appears.
+- **Watch Levels**: Observe support around 592-594; if broken, further declines may occur. Resistance around 600-604 may cap short-term gains.
+- **Volatility Expectation**: Stay aware of possible volatility spikes given the elevated price swings and volume activity. 
+
+Overall, the perceived sentiment leans slightly bearish, reflecting recent sell-offs, although the sentiment may revert with strong support or positive catalysts.
+"Here's a table report analyzing the stock chart:
+| **Aspect**          | **Analysis**                                                                                      |
+|---------------------|---------------------------------------------------------------------------------------------------| 
+| **Directional Momentum** | The recent candlesticks indicate downward pressure following a peak, suggesting bearish sentiment.   
+| **Trends**          | The overall trend shows a recent reversal from an uptrend to a downtrend, marked by lower highs and lows.
+ **Volatility**      | Increased size in recent candlesticks and volume spikes suggest heightened volatility.           
+| **Support & Resistance** | Potential resistance near recent high around 612 and support around the current price of 594.            
+| **Volume**          | Current volume at 43.29M, slightly below the 30-day average (44.66M), indicates moderate activity.  
+| **Perceived Sentiment** | Neutral to Bearish. Short-term bearish due to recent declines, while neutral in the broader context. 
+| Insights\n\n- **Price Action**: The recent drop suggests potential continuation of the downtrend unless a reversal pattern appears.
+| **Watch Levels**: Observe support around 592-594; if broken, further declines may occur. Resistance around 600-604 may cap short-term gains.
+| **Volatility Expectation**: Stay aware of possible volatility spikes given the elevated price swings and volume activity. 
+| Overall, the perceived sentiment leans slightly bearish, reflecting recent sell-offs, although the sentiment may revert with strong support or positive catalysts."
+=== Capturing TradingView Chart ===
+Initializing WebDriver...
+Opening TradingView URL: https://www.tradingview.com/chart/?symbol=SPY
+Taking screenshot...
+Converting screenshot to a valid PNG format...
+Chart successfully saved: \screenshots\SPY_chart.png
+
+Uploading image to ImageKit...
+Uploading 
+Image uploaded successfully: https://ik.imagekit.io/fwe3vbq1p/SPY_chart_2y0B4nPMT.png
+
+Running AI analysis on the uploaded chart...
+Deleted local image: X:\screenshots\SPY_chart.png
+
+=== AI-Generated TradingView Chart Analysis ===
+
+Here's a table report analyzing the stock chart:
+
+| **Aspect**          | **Analysis**                                                                                      |
+|---------------------|---------------------------------------------------------------------------------------------------|
+| **Directional Momentum** | The recent candlesticks indicate downward pressure following a peak, suggesting bearish sentiment.   |
+| **Trends**          | The overall trend shows a recent reversal from an uptrend to a downtrend, marked by lower highs and lows. |
+| **Volatility**      | Increased size in recent candlesticks and volume spikes suggest heightened volatility.            |
+| **Support & Resistance** | Potential resistance near recent high around 612 and support around the current price of 594.            |
+| **Volume**          | Current volume at 43.29M, slightly below the 30-day average (44.66M), indicates moderate activity.   |
+| **Perceived Sentiment** | Neutral to Bearish. Short-term bearish due to recent declines, while neutral in the broader context. |
+
+### Insights
+
+- **Price Action**: The recent drop suggests potential continuation of the downtrend unless a reversal pattern appears.
+- **Watch Levels**: Observe support around 592-594; if broken, further declines may occur. Resistance around 600-604 may cap short-term gains.
+- **Volatility Expectation**: Stay aware of possible volatility spikes given the elevated price swings and volume activity. 
+
+Overall, the perceived sentiment leans slightly bearish, reflecting recent sell-offs, although the sentiment may revert with strong support or positive catalysts.
+"Here's a table report analyzing the stock chart:
+| **Aspect**                  | **Analysis**                                                           
+| **Directional Momentum**    | The recent candlesticks indicate downward pressure following a peak, suggesting bearish sentiment.   |
+| **Trends**                  | The overall trend shows a recent reversal from an uptrend to a downtrend, marked by lower highs and lows. |
+| **Volatility**              | Increased size in recent candlesticks and volume spikes suggest heightened volatility.            |
+| **Support & Resistance**    | Potential resistance near recent high around 612 and support around the current price of 594.            |
+| **Volume**                  | Current volume at 43.29M, slightly below the 30-day average (44.66M), indicates moderate activity.   |
+| **Perceived Sentiment**     | Neutral to Bearish. Short-term bearish due to recent declines, while neutral in the broader context. |
+---Insights
+ **Price Action**: The recent drop suggests potential continuation of the downtrend unless a reversal pattern appears.
+- **Watch Levels**: Observe support around 592-594; if broken, further declines may occur. Resistance around 600-604 may cap short-term gains.
+- **Volatility Expectation**: Stay aware of possible volatility spikes given the elevated price swings and volume activity. 
+Overall, the perceived sentiment leans slightly bearish, reflecting recent sell-offs, although the sentiment may revert with strong support or positive catalysts."
