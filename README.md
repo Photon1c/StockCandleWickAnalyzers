@@ -1,5 +1,18 @@
 # Stock Candle Wick Analyzers
 
+# Update 3.12.25 - Quick Reference Table (Created By GPT-4o)
+
+| Feature          | Meaning                       | Market Sentiment            |
+|------------------|-------------------------------|-----------------------------|
+| Hollow Candle    | Close > Open                  | Bullish (Buying Pressure)   |
+| Filled Candle    | Close < Open                  | Bearish (Selling Pressure)  |
+| Long Body        | Strong Momentum               | Confident (Bullish/Bearish) |
+| Short Body       | Weak Momentum                 | Indecision, Consolidation   |
+| Long Upper Wick  | Rejected Higher Prices        | Resistance, Bearish Signal  |
+| Long Lower Wick  | Rejected Lower Prices         | Support, Bullish Signal     |
+| Short or No Wick | Price stability within period | Controlled or Consolidated  |
+
+
 # Update 2.20.25 - Imagekit Vision Report Generator Ready 👓💹🎊
 
 The [Imagekit Vision Analysis](scripts/Imagekit-Vision-Analysis-version-hourglass.py) script is now available. Here is some sample [output.](outputs/Imagekit-Vision-version-hourglass-sample-output.txt)
