@@ -30,7 +30,7 @@ import httpx
 # ---------------------------
 # Configuration
 # ---------------------------
-DEFAULT_MODEL = os.getenv("OPENAI_MODEL", "gpt-5")
+DEFAULT_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o")  # Changed from gpt-5 to gpt-4o (actual model)
 DEFAULT_TICKER = os.getenv("TICKER", "SPY")
 DEFAULT_OUTPUT_DIR = os.getenv("OUTPUT_DIR", "enhanced_imagebot/reports")
 DEFAULT_SCREENSHOT_DIR = os.getenv("SCREENSHOT_DIR", "./screenshots")
@@ -278,25 +278,31 @@ def _complete_json(
             return resp.choices[0].message.content
         except Exception:
             return ""
-    try:
-        if hasattr(client, "responses"):
-            resp = client.responses.create(
-                model=model,
-                input=[
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": user_content},
-                ],
-                response_format=json_schema_format(),
-                max_output_tokens=max_new_tokens,
-                temperature=temperature,
-            )
-            raw_text = extract_text(resp)
-            if raw_text:
-                return raw_text, resp
-    except Exception:
-        pass
+    # Try Responses API first (if available in newer models)
+    # Note: Skip for gpt-4o as it uses Chat Completions API
+    if model not in ["gpt-4o", "gpt-4", "gpt-4o-mini"]:
+        try:
+            if hasattr(client, "responses"):
+                resp = client.responses.create(
+                    model=model,
+                    input=[
+                        {"role": "system", "content": system_prompt},
+                        {"role": "user", "content": user_content},
+                    ],
+                    response_format=json_schema_format(),
+                    max_output_tokens=max_new_tokens,
+                    temperature=temperature,
+                )
+                raw_text = extract_text(resp)
+                if raw_text:
+                    print(f"✅ Response API succeeded ({len(raw_text)} chars)")
+                    return raw_text, resp
+        except Exception:
+            pass  # Silently fall through to Chat Completions
 
+    # Try Chat Completions with JSON mode
     try:
+        print(f"Trying Chat Completions API with model: {model}")
         resp = client.chat.completions.create(
             model=model,
             messages=[
@@ -308,22 +314,27 @@ def _complete_json(
             temperature=temperature,
         )
         raw_text = extract_text(resp)
+        print(f"✅ Chat Completions succeeded ({len(raw_text) if raw_text else 0} chars)")
         return raw_text, resp
     except Exception as e:
+        print(f"⚠️ JSON mode failed: {e}, trying without JSON schema...")
+        # Fallback without strict JSON schema
         try:
             resp = client.chat.completions.create(
                 model=model,
                 messages=[
-                    {"role": "system", "content": system_prompt},
+                    {"role": "system", "content": system_prompt + "\n\nIMPORTANT: Return ONLY valid JSON with no additional text."},
                     {"role": "user", "content": user_content},
                 ],
                 max_completion_tokens=max_new_tokens,
                 temperature=temperature,
             )
             raw_text = extract_text(resp)
+            print(f"✅ Fallback mode succeeded ({len(raw_text) if raw_text else 0} chars)")
             return raw_text, resp
-        except Exception:
-            return "", e
+        except Exception as e2:
+            print(f"❌ All API attempts failed: {e2}")
+            return "", e2
 
 
 # ---------------------------
@@ -451,28 +462,66 @@ def call_agent_summary(client, model: str, agent: Dict[str, str], image_url_or_d
             temperature=0.9,
             max_new_tokens=240,
         )
+        
+        # Debug logging
+        print(f"\n[{agent['name']}] Raw response length: {len(raw) if raw else 0}")
+        
         raw = raw or "{}"
         raw_json = _extract_json_block(raw)
+        
+        # Try to parse JSON
+        data = {}
         try:
             data = json.loads(raw_json)
-        except Exception:
-            data = {}
+            print(f"[{agent['name']}] ✅ JSON parsed successfully")
+        except json.JSONDecodeError as e:
+            print(f"[{agent['name']}] ⚠️ JSON parse error: {e}")
+            print(f"[{agent['name']}] Raw JSON block: {raw_json[:200]}...")
+            # Try to extract from raw text if JSON parsing fails
+            if raw:
+                # Look for sentiment keywords in text
+                raw_lower = raw.lower()
+                if "bullish" in raw_lower:
+                    data["sentiment"] = "Bullish"
+                elif "bearish" in raw_lower:
+                    data["sentiment"] = "Bearish"
+                else:
+                    data["sentiment"] = "Neutral"
+                # Use the raw text as outlook
+                data["outlook"] = raw[:200].strip()
+        
         # Normalize with defaults
         sentiment = str(data.get("sentiment", "Neutral")).strip().title()
         outlook = str(data.get("outlook", "")).strip()
-        if not outlook:
-            s = raw.strip()
-            for sep in [". ", "! ", "? "]:
-                idx = s.find(sep)
-                if idx != -1:
-                    outlook = (s[: idx + 1]).strip()
-                    break
+        
+        if not outlook or outlook == "Outlook unavailable; model returned non-JSON content.":
+            # Try to extract meaningful text from raw response
+            if raw and len(raw.strip()) > 10:
+                # Clean up the raw response
+                clean_text = raw.strip()
+                # Remove JSON artifacts
+                clean_text = clean_text.replace("```json", "").replace("```", "").strip()
+                # Take first 1-2 sentences
+                sentences = []
+                for sep in [". ", "! ", "? "]:
+                    parts = clean_text.split(sep)
+                    if len(parts) > 1:
+                        sentences.append(parts[0].strip() + sep.strip())
+                        if len(parts) > 2:
+                            sentences.append(parts[1].strip() + sep.strip())
+                        break
+                outlook = " ".join(sentences[:2]) if sentences else clean_text[:200]
+            
             if not outlook:
-                outlook = "Outlook unavailable; model returned non-JSON content."
+                outlook = f"Analysis in progress for {ticker} (model response formatting issue)."
+        
         keywords = data.get("keywords", [])
         if not isinstance(keywords, list):
             keywords = [str(keywords)]
-        keywords = [str(k).strip().lower() for k in keywords][:5]
+        keywords = [str(k).strip().lower() for k in keywords if k][:5]
+        if not keywords:
+            keywords = ["weekly", "outlook", ticker.lower()]
+        
         confidence = int(max(0, min(100, int(data.get("confidence", 66)))))
 
         # Encourage decisive stance if Neutral
